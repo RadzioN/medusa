@@ -1,5 +1,16 @@
 # @medusajs/workflow-engine-redis
 
+## 2.6.2
+
+### Patch Changes
+
+- [#11771](https://github.com/medusajs/medusa/pull/11771) [`72d2cf92075b3e0849251f233517e2972de1b19c`](https://github.com/medusajs/medusa/commit/72d2cf92075b3e0849251f233517e2972de1b19c) Thanks [@adrien2p](https://github.com/adrien2p)! - fix: workflow retry interval race condition
+
+- [#11822](https://github.com/medusajs/medusa/pull/11822) [`6053ec3976d5ebd18680eba5eff3c71038a108cb`](https://github.com/medusajs/medusa/commit/6053ec3976d5ebd18680eba5eff3c71038a108cb) Thanks [@carlos-r-l-rodrigues](https://github.com/carlos-r-l-rodrigues)! - chore(workflow-engine-redis): remove repeatable jobs from old queue
+
+- Updated dependencies [[`ec56a8bc857a74788df6523af25914da95c4c1d8`](https://github.com/medusajs/medusa/commit/ec56a8bc857a74788df6523af25914da95c4c1d8)]:
+  - @medusajs/framework@2.6.2
+
 ## 2.6.1
 
 ### Patch Changes

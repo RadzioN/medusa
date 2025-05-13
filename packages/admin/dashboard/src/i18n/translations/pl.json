@@ -45,6 +45,7 @@
     "plusCount": "+ {{count}}",
     "plusCountMore": "+ {{count}} więcej",
     "areYouSure": "Czy jesteś pewien?",
+    "areYouSureDescription": "Zamierzasz usunąć {{entity}} {{title}}. Tej operacji nie można cofnąć.",
     "noRecordsFound": "Nie znaleziono rekordów",
     "typeToConfirm": "Wpisz {val} aby potwierdzić:",
     "noResultsTitle": "Brak wyników",
@@ -302,8 +303,8 @@
     "errors": {
       "fixError": "Napraw błąd",
       "count_one": "{{count}} błąd",
-      "numberOfKeys_few": "{{count}} błędy",
-      "numberOfKeys_many": "{{count}} błędów",
+      "count_few": "{{count}} błędy",
+      "count_many": "{{count}} błędów",
       "count_other": "{{count}} błędów"
     }
   },
@@ -359,6 +360,7 @@
     "backToDashboard": "Powrót do pulpitu"
   },
   "addresses": {
+    "title": "Adresy",
     "shippingAddress": {
       "header": "Adres dostawy",
       "editHeader": "Edytuj adres dostawy",
@@ -843,8 +845,10 @@
     "locationLevels": "Lokalizacje",
     "associatedVariants": "Powiązane warianty",
     "manageLocations": "Zarządzaj lokalizacjami",
+    "manageLocationQuantity": "Zarządzaj ilością w lokalizacjach",
     "deleteWarning": "Zamierzasz usunąć element magazynowy. Tej akcji nie można cofnąć.",
     "editItemDetails": "Edytuj szczegóły elementu",
+    "quantityAcrossLocations": "{{quantity}} w {{locations}} lokalizacji/ach",
     "create": {
       "title": "Utwórz element magazynowy",
       "details": "Szczegóły",
@@ -967,7 +971,28 @@
     },
     "registered": "Zarejestrowany",
     "guest": "Gość",
-    "hasAccount": "Posiada konto"
+    "hasAccount": "Posiada konto",
+    "addresses": {
+      "title": "Adresy",
+      "fields": {
+        "addressName": "Nazwa adresu",
+        "address1": "Adres 1",
+        "address2": "Adres 2",
+        "city": "Miasto",
+        "province": "Województwo",
+        "postalCode": "Kod pocztowy",
+        "country": "Kraj",
+        "phone": "Telefon",
+        "company": "Firma",
+        "countryCode": "Kod kraju",
+        "provinceCode": "Kod województwa"
+      },
+      "create": {
+        "header": "Dodaj adres",
+        "hint": "Utwórz nowy adres dla klienta.",
+        "successToast": "Adres został pomyślnie utworzony."
+      }
+    }
   },
   "customerGroups": {
     "domain": "Grupy klientów",
@@ -1152,7 +1177,7 @@
       "sendNotificationHint": "Powiadom klienta o zwrocie.",
       "returnTotal": "Suma zwrotu",
       "inboundTotal": "Suma przychodząca",
-      "refundAmount": "Kwota zwrotu",
+      "estDifference": "Szacowana różnica",
       "outstandingAmount": "Pozostało do zapłaty",
       "reason": "Powód",
       "reasonHint": "Wybierz powód, dla którego klient chce zwrócić produkty.",
@@ -1743,10 +1768,15 @@
       "header": "Utwórz region podatkowy",
       "hint": "Utwórz nowy region podatkowy, aby zdefiniować stawki podatkowe dla konkretnego kraju.",
       "errors": {
-        "rateIsRequired": "Stawka podatku jest wymagana podczas tworzenia domyślnej stawki podatku.",
-        "nameIsRequired": "Nazwa jest wymagana podczas tworzenia domyślnej stawki podatku."
+        "missingProvider": "Dostawca jest wymagany podczas tworzenia regionu podatkowego.",
+        "missingCountry": "Kraj jest wymagany podczas tworzenia regionu podatkowego."
       },
       "successToast": "Region podatkowy został pomyślnie utworzony."
+    },
+    "edit": {
+      "header": "Edytuj region podatkowy",
+      "hint": "Edytuj szczegóły regionu podatkowego.",
+      "successToast": "Region podatkowy został pomyślnie zaktualizowany."
     },
     "province": {
       "header": "Prowincje",
@@ -1754,6 +1784,9 @@
         "header": "Utwórz regionalny region podatkowy",
         "hint": "Utwórz nowy region podatkowy, aby zdefiniować stawki podatkowe dla konkretnej prowincji."
       }
+    },
+    "provider": {
+      "header": "Dostawca podatków"
     },
     "state": {
       "header": "Stany",
@@ -1880,6 +1913,7 @@
       },
       "taxRate": "Stawka podatku",
       "taxCode": "Kod podatkowy",
+      "taxProvider": "Dostawca podatków",
       "targets": {
         "label": "Cele",
         "hint": "Wybierz cele, do których będzie miała zastosowanie ta stawka podatku.",
@@ -2510,7 +2544,6 @@
       "createTaxRate": "Utwórz stawkę podatku",
       "createTaxRateHint": "Utwórz nową stawkę podatku dla regionu.",
       "deleteRateDescription": "Zamierzasz usunąć stawkę podatku {{name}}. Tej akcji nie można cofnąć.",
-      "editTaxRate": "Edytuj stawkę podatku",
       "editRateAction": "Edytuj stawkę",
       "editOverridesAction": "Edytuj zastąpienia",
       "editOverridesTitle": "Edytuj zmiany stawek podatku",
@@ -3069,7 +3102,7 @@
     "minutes_few": "Minuty",
     "minutes_many": "Minut",
     "minutes_other": "Minut",
-    "seconds_one": "Sekund",
+    "seconds_one": "Sekunda",
     "seconds_few": "Sekundy",
     "seconds_many": "Sekund",
     "seconds_other": "Sekund"
